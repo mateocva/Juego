@@ -2,7 +2,7 @@ oooooooxooooo
 oxoxxxxxooooo
 oxoxoooooxxxx
 oxoxoxxxxxooo
-oxoxoxoooooxo
+oxPxoxoooooxo
 oxxxoooxoooxo
 oxoooooxoooxo
 oxoooxoxxxoxA
@@ -10,4 +10,4 @@ oxoxoxoooooxx
 oxoxoxooxooxo
 oxoxoxoxxxooo
 oxoxxxxxoxxxx
-ooooooocPoooZ
+ooooooocooooZ
