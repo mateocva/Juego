@@ -106,6 +106,7 @@ if __name__ == '__main__':
     enemigos=pygame.sprite.Group()
     objetivo2=pygame.sprite.Group()
     objetivoff=pygame.sprite.Group()
+    balas= pygame.sprite.Group()
 
 
     def get_line(start, end):
@@ -375,9 +376,30 @@ if __name__ == '__main__':
 
             jp.ls_mods=mods
 
-            p=Enemigox11(0,0)
-            enemigos.add(p)
-            todos.add(p)
+            p1=Enemigo2(100,50)
+            p2=Enemigo2(200,50)
+            p3=Enemigo2(300,50)
+            p4=Enemigo2(400,50)
+            p5=Enemigo2(500,50)
+            enemigos.add(p1,p3,p5)
+            todos.add(p1,p3,p5)
+
+        for enemigo in enemigos:
+        	if lv == 2:
+        		if enemigo.disparar:
+        			b = BalaEnemigo2(enemigo.rect)
+        			balas.add(b)
+        			todos.add(b)
+
+        l_choque = pygame.sprite.spritecollide(jp,balas,True)
+        for ecol in l_choque:
+	        	pantalla.fill(BLANCO)
+	        	derrota=pygame.image.load('over.png').convert()
+	        	pantalla.blit(derrota,(0,0))
+	        	pygame.display.flip()
+	        	reloj.tick(1)
+	        	fin=True
+
     
     	l_choque = pygame.sprite.spritecollide(jp,objetivo2,True)
     	for ecol in l_choque:
